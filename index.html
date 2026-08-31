@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WeatherDex : météo mondiale, prévisions et recherche de villes via Open-Meteo." />
+  <title>WeatherDex — Météo mondiale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Projet GitHub Pages + Open-Meteo API</p>
+        <h1>WeatherDex</h1>
+        <p class="subtitle">Recherche une ville dans le monde et découvre la météo actuelle, les températures, le vent et les prévisions des prochains jours.</p>
+      </div>
+      <div class="hero-badge" aria-hidden="true">🌤️</div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Recherche météo">
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="Ex. Paris, Tokyo, Montréal…" autocomplete="off" />
+          <select id="unitSelect" aria-label="Unité de température">
+            <option value="celsius">°C</option>
+            <option value="fahrenheit">°F</option>
+          </select>
+          <button id="searchButton" type="button">Rechercher</button>
+        </div>
+        <button id="locationButton" class="secondary-button" type="button">📍 Ma position</button>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+
+      <section>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Météo mondiale</p>
+            <h2>Villes populaires</h2>
+          </div>
+          <button id="refreshButton" class="ghost-button" type="button">Actualiser</button>
+        </div>
+        <div id="weatherGrid" class="pokemon-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="weatherDialog" class="pokemon-dialog">
+    <button id="closeDialogButton" class="close-button" type="button" aria-label="Fermer">×</button>
+    <div id="weatherDetails"></div>
+  </dialog>
+
+  <template id="weatherCardTemplate">
+    <article class="pokemon-card">
+      <div class="card-topline">
+        <span class="weather-country"></span>
+        <span class="card-arrow">↗</span>
+      </div>
+      <div class="weather-icon" aria-hidden="true"></div>
+      <div class="card-content">
+        <h3 class="pokemon-name"></h3>
+        <div class="pokemon-types"></div>
+        <div class="price-row">
+          <strong class="weather-temp"></strong>
+          <span class="weather-condition"></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
