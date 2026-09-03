@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .ad-zone{width:100%;display:flex;justify-content:center;align-items:center;margin:30px auto;overflow:hidden}
+    .ad-desktop{display:block;max-width:728px}
+    .ad-mobile{display:none;max-width:320px}
+    .ad-square{min-height:250px}
+    @media(max-width:900px){.ad-desktop{display:none}.ad-mobile{display:block}}
+  </style>
 </head>
 <body>
   <div class="page-shell">
@@ -20,6 +27,33 @@
       </div>
       <div class="hero-badge" aria-hidden="true">🌤️</div>
     </header>
+
+    <section class="ad-zone" aria-label="Publicité">
+      <div class="ad-desktop">
+        <script>
+          atOptions = {
+            'key':'0e9f9c2b514f24e95999ab74025b3183',
+            'format':'iframe',
+            'height':90,
+            'width':728,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/0e9f9c2b514f24e95999ab74025b3183/invoke.js"></script>
+      </div>
+      <div class="ad-mobile">
+        <script>
+          atOptions = {
+            'key':'7082f47d8ae91500e6aab5762c4fbec0',
+            'format':'iframe',
+            'height':50,
+            'width':320,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/7082f47d8ae91500e6aab5762c4fbec0/invoke.js"></script>
+      </div>
+    </section>
 
     <main>
       <section class="controls" aria-label="Recherche météo">
@@ -34,6 +68,19 @@
         <button id="locationButton" class="secondary-button" type="button">📍 Ma position</button>
       </section>
 
+      <section class="ad-zone ad-square" aria-label="Publicité">
+        <script>
+          atOptions = {
+            'key':'4ff4b481288a21dec304ee4dd58b64ef',
+            'format':'iframe',
+            'height':250,
+            'width':300,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/4ff4b481288a21dec304ee4dd58b64ef/invoke.js"></script>
+      </section>
+
       <p id="status" class="status" aria-live="polite"></p>
 
       <section>
@@ -46,7 +93,47 @@
         </div>
         <div id="weatherGrid" class="pokemon-grid"></div>
       </section>
+
+      <section class="ad-zone ad-square" aria-label="Publicité">
+        <script>
+          atOptions = {
+            'key':'4ff4b481288a21dec304ee4dd58b64ef',
+            'format':'iframe',
+            'height':250,
+            'width':300,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/4ff4b481288a21dec304ee4dd58b64ef/invoke.js"></script>
+      </section>
     </main>
+
+    <section class="ad-zone" aria-label="Publicité">
+      <div class="ad-desktop">
+        <script>
+          atOptions = {
+            'key':'0e9f9c2b514f24e95999ab74025b3183',
+            'format':'iframe',
+            'height':90,
+            'width':728,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/0e9f9c2b514f24e95999ab74025b3183/invoke.js"></script>
+      </div>
+      <div class="ad-mobile">
+        <script>
+          atOptions = {
+            'key':'7082f47d8ae91500e6aab5762c4fbec0',
+            'format':'iframe',
+            'height':50,
+            'width':320,
+            'params':{}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/7082f47d8ae91500e6aab5762c4fbec0/invoke.js"></script>
+      </div>
+    </section>
   </div>
 
   <dialog id="weatherDialog" class="pokemon-dialog">
